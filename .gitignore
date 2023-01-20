@@ -1,6 +1,7 @@
 .idea
 venv
 wiki
+static/admin
 
 __pycache__/
 
