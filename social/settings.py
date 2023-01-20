@@ -33,7 +33,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Установленные
+    'blog.apps.BlogConfig',
+
+    # https://django-crispy-forms.readthedocs.io/en/latest/install.html
+    'crispy_forms',
+    # https://pypi.org/project/django-cleanup/
     'django_cleanup.apps.CleanupConfig',
 ]
 
@@ -128,3 +132,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# django-crispy-forms
+# https://django-crispy-forms.readthedocs.io/en/latest/install.html
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
+# END django-crispy-forms
