@@ -3,3 +3,5 @@ venv
 wiki
 
 __pycache__/
+
+*.sqlite
