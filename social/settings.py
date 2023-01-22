@@ -1,8 +1,8 @@
 # _*_ coding: utf-8 _*_
 # debug-toolbar
 INTERNAL_IPS = [
-     "127.0.0.1",
- ]
+    "127.0.0.1",
+]
 
 """
 Django settings for social project.
@@ -21,7 +21,7 @@ from django.contrib.messages import constants as messages
 from dotenv import load_dotenv
 
 # Loading ENV
-env_path = Path('.')/'.env'
+env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 # END python-dotenv
 
@@ -241,3 +241,15 @@ CHANNEL_LAYERS = {
 }
 """
 # END django channels
+
+
+# email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
+# END email
+
+GOOGLE_RECAPCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPCHA_SECRET_KEY')
