@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'debug_toolbar',
     # 'channels', # включим, когда будем писать асинхронный чат
     'django.contrib.humanize',
+    # https://django-extensions.readthedocs.io/en/latest/installation_instructions.html
+    'django_extensions',
 
     'allauth',
     'allauth.account',
@@ -253,3 +255,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
 # END email
 
 GOOGLE_RECAPCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPCHA_SECRET_KEY')
+
+# !!! Только для разработки !!!
+# alias jsh='python manage.py shell_plus --notebook'
+os.environ['DJANGO_ALLOW_ASYNC_UNSAFE'] = 'true'
